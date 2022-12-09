@@ -1,0 +1,124 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+ *{
+ 	margin :0;
+ 	padding: 0;
+ 	box-sizing: border-box;
+ 	font-family: 'popins','sans-serif';
+ 	cursor: pointer;
+ }
+ body{
+ 	height: 100vh;
+ 	widows: 100%;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	background: linear-gradient(to right,#3f5efb,#fc466b);
+ }
+ .login_form{
+ 	width: 25rem;
+ 	height: 28rem;
+ 	display: flex;
+ 	flex-direction: column;
+ 	background:rgba(255, 255, 255, 0.06) ;
+ 	box-shadow: 0 1px 12px 0 rgba(31,38, 135, .37);
+ 	border-radius: 30px;
+	align-items: center;
+ 	border-left: 1px solid rgba(255, 253, 253, 0.3);
+ 	border-top: 1px solid rgba(255, 255, 255, .3);
+ }
+ form:before{
+ 	content: '';
+ 	position: absolute;
+ 	bottom: 3%;
+ 	right: 28%;
+ 	width: 200px;
+ 	height: 200px;
+ 	background: magenta;
+ 	border-radius: 50%;
+ 	z-index: -1;
+ 	opacity: .8;
+ }
+ form:after{
+ 	content: '';
+ 	position: absolute;
+ 	top: 8%;
+ 	left: 32%;
+ 	width: 120px;
+ 	height: 120px;
+ 	background: magenta;
+ 	border-radius: 50%;
+ 	z-index: -1;
+ 	opacity: .8;
+ }
+ h1{
+ 	font-size: 40px;
+ 	text-align: center;
+ 	color: white;
+ 	text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+ 	letter-spacing: 3px;
+ 	margin-bottom:5% ;
+ 	opacity: .7;
+ }
+
+ label{
+	height: 40px;
+	width: 350px;
+	padding: 0 5px;
+	font-size: 18px;
+	outline: none;
+ 	
+ }
+ input{
+	width:200px;	
+	margin: 7% auto;
+ 	background: transparent;
+	border: none;
+	margin-bottom: 8%;
+ 	border-bottom:1px solid rgba(255, 255, 255, .6) ;
+ 	opacity: .8;
+	 height: 40px;
+	 width: 350px;
+	 padding: 1 12px;
+	 font-size: 18px;
+	 outline: none;
+	 border: 1px solid silver;
+ }
+ 
+ .login_form button{
+ 	width: 40%;
+ 	margin: 3% auto;
+	margin-left: 90px;
+ 	color: white;
+ 	font-size: 15px;
+ 	opacity: .7;
+ 	background: rgba(255, 255, 255, 0.06);
+ 	padding: 10px 30px;
+ 	border: none;
+ 	outline: none;
+ 	border-radius: 20px;
+	text-align: center;
+ 	box-shadow: 2px 2px 4px rgba(31, 38, 135, .3);
+    text-shadow: 1px 1px 1px rgba(255, 0255, 255, 2);
+ 	border-left: 2px solid rgba(255, 255, 255, .3) ;
+ 	border-top:  1px solid rgba(255, 255, 255, .3);
+ }
+ .login_form a{
+ 	font-size: 12px;
+ 	text-align: center;
+ 	opacity: .7;
+	margin:5% auto;
+	margin-left: 120px;
+ }
+ .login_form #email_error,
+.login_form #pass_error{
+	margin-top: 5px;
+	width: 345px;
+	font-size: 18px;
+	color: #e41414;
+	background: rgba(255,0,0,0.1);
+	text-align: center;
+	padding: 5px 8px;
+	border-radius: 3px;
+	border: 1px solid #EF9A9A;
+	display: none;
+}
