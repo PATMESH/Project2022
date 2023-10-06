@@ -1,0 +1,85 @@
+/* General styling for the body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the main container with background image */
+#demo1 {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://cdn.dribbble.com/users/2666491/screenshots/15106369/media/f9f552acf35333c0c33a088290efee65.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Styling for the weather card */
+.demo {
+  background-color: rgba(255, 255, 255, 0.664); /* White blur color background */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin-top: 5%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none; /* Remove the border */
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the city and result divs */
+
+#result {
+  margin-top: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+/* Additional styling for the city and result divs */
+#city1 {
+  color: #007bff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#result {
+  font-size: 18px;
+}

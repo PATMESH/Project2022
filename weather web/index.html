@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WeatherApp</title>
+  <link rel="stylesheet" type="text/css" href="style.css"> 
+	<script>
+    function loadDoc() {
+      var city=document.getElementById("city").value;
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+          var object= JSON.parse(this.responseText);
+          document.getElementById("result").innerHTML =
+          "Temprature: "+ object.main.temp+" °C<br>"+ 
+          "Humidity: "+object.main.humidity+" %<br>" +
+          "Max Temprature: "+object.main.temp_max+" °C<br>" +
+          "Min Temprature: "+object.main.temp_min+" °C<br>" +
+          "Condition: "+object.weather[0].description;
+        }
+      };
+      xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=3e6184d3b5a7e11052c1124d03ce6236&units=metric", true);
+      xhttp.send();
+    }
+</script>
+<style>
+  
+</style>
+</head>
+<body>
+  
+  <div id="demo1" style="display: grid;">
+    <div class="demo">
+      <h2>Weather</h2>
+  <form>
+    <input type="text" id="city" placeholder="Enter the City Name"><br><br>
+    <button type="button" id="btn"onclick="loadDoc()">Find Weather</button>
+  </form>
+  <div id="result"></div>
+  </div>
+  </div>
+</body>
+</html>

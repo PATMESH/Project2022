@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+body {
+    background: black;
+}
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+.clock {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translateX(-40%) translateY(-40%);
+    color: #0077ff;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Orbitron;
+    letter-spacing: 17px;
+}
+.glowing-card {
+    width: 90%;
+    height: 400px;
+    background: #000;
+    border-radius: 30px;
+    margin: 120px auto;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: rotateCard 10s linear infinite;
+  }
+  
+  
+  .glowing-card::after {
+    content: "";
+    position: absolute;
+    height: 98%;
+    width: 100%;
+    background: linear-gradient(var(--rotate) , rgb(255, 35, 35), rgb(0, 247, 82) , rgb(255, 230, 0) , rgb(226, 9, 255));
+    animation: spin 4.5s linear infinite;
+    z-index: -1;
+    filter: blur(20px);
+    transition: all 800ms ease;
+  }
+  .glowing-card .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+  }
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  .glowing-card:hover::after {
+    height: 103%;
+    width: 102%;
+  }
+
+  
