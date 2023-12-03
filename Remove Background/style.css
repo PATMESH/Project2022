@@ -1,0 +1,29 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 50px;
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.custom-file-label::after {
+    content: "Browse";
+}
+
+#img {
+    margin-left: 10%;
+}
+
+.container2 {
+    width: 1000px;
+    height: 600px;
+    background-color: aqua;
+    margin-left: 15%;
+    margin-top: 13%;
+    margin-bottom: 20%;
+}
