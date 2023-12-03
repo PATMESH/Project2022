@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-container">
+        <h2>Hello <span id="name"></span> ...!</h2>
+        <div style="height: 5%;"></div>
+        <img id="displayImage" src="" alt="Profile Picture" style= "width:170px;height:180px;border-radius: 50%;">
+        <p><span id="email"></span></p>
+        <h4 style="text-align: left;">Bio-</h4>
+        <p><strong>DOB:</strong> <span id="dob"></span></p>
+        <p><strong>Gender:</strong> <span id="gender"></span></p>
+        <p><strong>Languages:</strong> <button  id="languages"></button></p>
+        <p><strong>Mobile:</strong> <span id="mobile"></span></p>
+        <button class="btn">I've heard enough about <span id="name1"></span></button>
+    </div>
+    <script>
+        const formData = JSON.parse(localStorage.getItem("formData"));
+        const displayImage = document.getElementById("displayImage");
+        const uploadedPhoto = localStorage.getItem("uploadedPhoto");
+        if (uploadedPhoto) {
+            displayImage.src = uploadedPhoto;
+        }else{
+            window.location.href = "index.html";
+        }
+        if (formData) {
+            document.getElementById("name").textContent = formData.name || "";
+            document.getElementById("name1").textContent = formData.name || "";
+            const dateParts = formData.dob.split("-");
+            const formattedDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+            document.getElementById("dob").textContent = formattedDate;
+            document.getElementById("gender").textContent = formData.gender || "";
+            document.getElementById("languages").textContent = formData.languages || "";
+            document.getElementById("mobile").textContent = formData.mobile || "";
+            document.getElementById("email").textContent = formData.email || "";
+        }
+        // window.addEventListener("beforeunload", function() {
+        //    localStorage.clear();
+        // });
+    </script>
+</body>
+</html>

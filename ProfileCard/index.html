@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="myForm" action="Home.html" method="GET">
+        <h3>Register Here</h3>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="" selected>--Select your gender--</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <br>
+
+        <label for="languages">Language:</label>
+        <select id="languages" name="languages" required>
+        <option value="" selected>--Select your language--</option>
+        <option value="Tamil">Tamil</option>
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Malayalam">Malayalam</option>
+        <option value="Telugu">Telugu</option>
+        </select>
+        <br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+        <br>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="profilePic">Profile Picture:</label>
+        <input type="file" id="photoInput" accept="image/*" name="photo">
+        <br>
+
+        <input type="submit" value="Send">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
